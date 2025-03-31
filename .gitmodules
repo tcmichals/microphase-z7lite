@@ -1,0 +1,3 @@
+[submodule "docs/fpga-docs"]
+	path = docs/fpga-docs
+	url = https://github.com/MicroPhase/fpga-docs.git
