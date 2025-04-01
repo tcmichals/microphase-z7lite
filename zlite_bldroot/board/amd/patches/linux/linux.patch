@@ -1,0 +1,94 @@
+diff -Naur a/arch/arm/boot/dts/xilinx/zynq-z7-lite.dts b/arch/arm/boot/dts/xilinx/zynq-z7-lite.dts
+--- a/arch/arm/boot/dts/xilinx/zynq-z7-lite.dts	1969-12-31 18:00:00.000000000 -0600
++++ b/arch/arm/boot/dts/xilinx/zynq-z7-lite.dts	2025-03-31 15:37:18.923537225 -0500
+@@ -0,0 +1,89 @@
++// SPDX-License-Identifier: GPL-2.0+
++/*
++ * Xilinx MicroZED board DTS
++ *
++ * Copyright (C) 2013 - 2016 Xilinx, Inc.
++ */
++/dts-v1/;
++#include "zynq-7000.dtsi"
++
++/ {
++	model = "Microphase z7 lite board";
++	compatible = "microphase,zynq-microphase", "xlnx,zynq-microphase", "xlnx,zynq-7000";
++
++	aliases {
++		serial0 = &uart1;
++		spi0 = &qspi;
++		mmc0 = &sdhci0;
++	};
++
++	memory@0 {
++		device_type = "memory";
++		reg = <0x20000000>;
++	};
++
++	chosen {
++		bootargs = "earlycon";
++		stdout-path = "serial0:115200n8";
++	};
++
++	usb_phy0: phy0 {
++		compatible = "usb-nop-xceiv";
++		#phy-cells = <0>;
++	};
++};
++
++&clkc {
++	ps-clk-frequency = <33333333>;
++};
++
++&qspi {
++	bootph-all;
++	status = "okay";
++};
++
++
++
++&sdhci0 {
++	bootph-all;
++	status = "okay";
++};
++
++&uart1 {
++	bootph-all;
++	status = "okay";
++};
++
++&usb0 {
++	status = "okay";
++	dr_mode = "host";
++	usb-phy = <&usb_phy0>;
++	pinctrl-names = "default";
++	pinctrl-0 = <&pinctrl_usb0_default>;
++};
++
++&pinctrl0 {
++	pinctrl_usb0_default: usb0-default {
++		mux {
++			groups = "usb0_0_grp";
++			function = "usb0";
++		};
++
++		conf {
++			groups = "usb0_0_grp";
++			slew-rate = <0>;
++			io-standard = <1>;
++		};
++
++		conf-rx {
++			pins = "MIO29", "MIO31", "MIO36";
++			bias-high-impedance;
++		};
++
++		conf-tx {
++			pins = "MIO28", "MIO30", "MIO32", "MIO33", "MIO34",
++			       "MIO35", "MIO37", "MIO38", "MIO39";
++			bias-disable;
++		};
++	};
++};
+
