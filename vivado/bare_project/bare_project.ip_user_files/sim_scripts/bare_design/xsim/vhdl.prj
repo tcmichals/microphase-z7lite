@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/bare_design/ip/bare_design_proc_sys_reset_0_0/sim/bare_design_proc_sys_reset_0_0.vhd" \
+
+# Do not sort compile order
+nosort

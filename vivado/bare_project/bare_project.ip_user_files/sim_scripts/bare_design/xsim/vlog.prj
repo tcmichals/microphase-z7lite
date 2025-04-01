@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "/home/tcmichals/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../bare_project.gen/sources_1/bd/bare_design/ipshared/ec67/hdl" --include "../../../../bare_project.gen/sources_1/bd/bare_design/ipshared/8391/hdl" \
+"../../../bd/bare_design/ip/bare_design_processing_system7_0_0/sim/bare_design_processing_system7_0_0.v" \
+"../../../bd/bare_design/sim/bare_design.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
