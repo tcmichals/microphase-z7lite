@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2.1 (lin64) Build 5266912 Sun Dec 15 09:03:31 MST 2024
-//Date        : Mon Mar 31 13:38:11 2025
+//Date        : Tue Apr  1 15:16:41 2025
 //Host        : VII-SW-1426 running 64-bit Ubuntu 22.04.5 LTS
 //Command     : generate_target bare_design.bd
 //Design      : bare_design

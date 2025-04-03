@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2.1 (lin64) Build 5266912 Sun Dec 15 09:03:31 MST 2024
-// Date        : Mon Mar 31 13:36:09 2025
+// Date        : Tue Apr  1 09:14:28 2025
 // Host        : VII-SW-1426 running 64-bit Ubuntu 22.04.5 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/tcmichals/projects/home/zynq/microphase-z7lite/microphase-z7lite/basic/bare_project/bare_project.gen/sources_1/bd/bare_design/ip/bare_design_proc_sys_reset_0_0/bare_design_proc_sys_reset_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top bare_design_proc_sys_reset_0_0 -prefix
+//               bare_design_proc_sys_reset_0_0_ bare_design_proc_sys_reset_0_0_sim_netlist.v
 // Design      : bare_design_proc_sys_reset_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,7 +70,6 @@ module bare_design_proc_sys_reset_0_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module bare_design_proc_sys_reset_0_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
@@ -266,7 +265,6 @@ module bare_design_proc_sys_reset_0_0_cdc_sync_0
         .O(lpf_exr_reg));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module bare_design_proc_sys_reset_0_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -421,7 +419,6 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynq" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module bare_design_proc_sys_reset_0_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -538,7 +535,6 @@ module bare_design_proc_sys_reset_0_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module bare_design_proc_sys_reset_0_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -779,7 +775,6 @@ module bare_design_proc_sys_reset_0_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module bare_design_proc_sys_reset_0_0_upcnt_n
    (Q,
     seq_clr,
